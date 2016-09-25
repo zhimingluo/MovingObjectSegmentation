@@ -19,7 +19,7 @@ The training data used in the paper can be download at:
 
 ### Evaluation
 
-For the CDNet dataset, the [CDNet](http://changedetection.net/) is used for evaluation.
+For the CDNet dataset, we upload the result to [CDNet](http://changedetection.net/) for evaluation.
 
 And the SBMI dataset, we compute the evalutaion metrics by using the code provide by [CDNet](http://changedetection.net/).
 
