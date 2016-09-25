@@ -1,12 +1,16 @@
 # Interactive Deep Learning Method for Segmenting Moving Objects
 
-The git repository is for the paper: "Interactive Deep Learning Method for Segmenting Moving Objects" by Yi Wang, Zhiming Luo, Pierre-Marc Jodoin. To appear in *Pattern Recognition Letters*.
+The git repository contains the code for the paper: 
+
+"Interactive Deep Learning Method for Segmenting Moving Objects" by Yi Wang, Zhiming Luo, Pierre-Marc Jodoin. 
+
+To appear in Special Issue on Scene Background Modeling and Initialization of *Pattern Recognition Letters*.
 
 
 
 ### Citing
 
-If you use this code, please consider citing:
+If you use this code, please cite our paper.
 
     
 ### Requirements: software
