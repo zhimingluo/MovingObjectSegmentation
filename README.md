@@ -1,7 +1,5 @@
 # Interactive Deep Learning Method for Segmenting Moving Objects
 
-
-
 ### Citing
 
 If you use this code, please consider citing:
@@ -9,7 +7,7 @@ If you use this code, please consider citing:
     
 ### Requirements: software
 
-Before use this code, you need have the MatConvNet toolbox installed which you can download at [MatConvnet's home page](http://www.vlfeat.org/matconvnet/).  The version of the toolbox we used is matconvnet-1.0-beta9.
+Before use this code, you need have the MatConvNet toolbox installed which can be download at [MatConvnet's home page](http://www.vlfeat.org/matconvnet/). and the version we used is matconvnet-1.0-beta9.
 
 ### Data: CDNet dataset and SMI dataset
 
