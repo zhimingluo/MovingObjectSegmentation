@@ -21,9 +21,9 @@ Before use this code, you need have the MatConvNet toolbox installed which can b
 
 The training data used in the paper can be download at: 
 
-(1) CDNet dataset:
+(1) [CDNet dataset](https://drive.google.com/open?id=0B5R9-JLKvJcvdHBYQVlRV1FoQ3M)
 
-(2) SBMI dataset:
+(2) [SBMI dataset](https://drive.google.com/open?id=0B5R9-JLKvJcva2RvaDk2SVgyb2s)
 
 ### Evaluation
 

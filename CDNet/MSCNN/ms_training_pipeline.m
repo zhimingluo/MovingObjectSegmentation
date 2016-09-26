@@ -1,63 +1,66 @@
-regular_training('baseline/highway');
-regular_training('baseline/office');
-regular_training('baseline/pedestrians');
-regular_training('baseline/PETS2006');
+method = 'manual';  % random, uniform, manual
+frames = 200;       % 50 100 150 200 
 
-regular_training('badWeather/blizzard');
-regular_training('badWeather/skating');
-regular_training('badWeather/snowFall'); 
-regular_training('badWeather/wetSnow');
+ms_regular_training('baseline/highway', method, frames);
+ms_regular_training('baseline/office', method, frames);
+ms_regular_training('baseline/pedestrians', method, frames);
+ms_regular_training('baseline/PETS2006', method, frames);
 
-regular_training('cameraJitter/badminton');
-regular_training('cameraJitter/boulevard');
-regular_training('cameraJitter/sidewalk'); 
-regular_training('cameraJitter/traffic');
+ms_regular_training('badWeather/blizzard', method, frames);
+ms_regular_training('badWeather/skating', method, frames);
+ms_regular_training('badWeather/snowFall', method, frames); 
+ms_regular_training('badWeather/wetSnow', method, frames);
 
-regular_training('dynamicBackground/boats');
-regular_training('dynamicBackground/canoe');
-regular_training('dynamicBackground/fall');
-regular_training('dynamicBackground/fountain01');
-regular_training('dynamicBackground/fountain02');
-regular_training('dynamicBackground/overpass');
+ms_regular_training('cameraJitter/badminton', method, frames);
+ms_regular_training('cameraJitter/boulevard', method, frames);
+ms_regular_training('cameraJitter/sidewalk', method, frames); 
+ms_regular_training('cameraJitter/traffic', method, frames);
 
-regular_training('intermittentObjectMotion/abandonedBox');
-regular_training('intermittentObjectMotion/parking');
-regular_training('intermittentObjectMotion/sofa');
-regular_training('intermittentObjectMotion/streetLight');
-regular_training('intermittentObjectMotion/tramstop');
-regular_training('intermittentObjectMotion/winterDriveway');
+ms_regular_training('dynamicBackground/boats', method, frames);
+ms_regular_training('dynamicBackground/canoe', method, frames);
+ms_regular_training('dynamicBackground/fall', method, frames);
+ms_regular_training('dynamicBackground/fountain01', method, frames);
+ms_regular_training('dynamicBackground/fountain02', method, frames);
+ms_regular_training('dynamicBackground/overpass', method, frames);
 
-regular_training('lowFramerate/port_0_17fps');
-regular_training('lowFramerate/tramCrossroad_1fps');
-regular_training('lowFramerate/tunnelExit_0_35fps');
-regular_training('lowFramerate/turnpike_0_5fps');
+ms_regular_training('intermittentObjectMotion/abandonedBox', method, frames);
+ms_regular_training('intermittentObjectMotion/parking', method, frames);
+ms_regular_training('intermittentObjectMotion/sofa', method, frames);
+ms_regular_training('intermittentObjectMotion/streetLight', method, frames);
+ms_regular_training('intermittentObjectMotion/tramstop', method, frames);
+ms_regular_training('intermittentObjectMotion/winterDriveway', method, frames);
 
-regular_training('nightVideos/bridgeEntry');
-regular_training('nightVideos/busyBoulvard');
-regular_training('nightVideos/fluidHighway');
-regular_training('nightVideos/streetCornerAtNight');
-regular_training('nightVideos/tramStation');
-regular_training('nightVideos/winterStreet');
+ms_regular_training('lowFramerate/port_0_17fps', method, frames);
+ms_regular_training('lowFramerate/tramCrossroad_1fps', method, frames);
+ms_regular_training('lowFramerate/tunnelExit_0_35fps', method, frames);
+ms_regular_training('lowFramerate/turnpike_0_5fps', method, frames);
 
-regular_training('PTZ/continuousPan');
-regular_training('PTZ/intermittentPan');
-regular_training('PTZ/twoPositionPTZCam');
-regular_training('PTZ/zoomInZoomOut');
+ms_regular_training('nightVideos/bridgeEntry', method, frames);
+ms_regular_training('nightVideos/busyBoulvard', method, frames);
+ms_regular_training('nightVideos/fluidHighway', method, frames);
+ms_regular_training('nightVideos/streetCornerAtNight', method, frames);
+ms_regular_training('nightVideos/tramStation', method, frames);
+ms_regular_training('nightVideos/winterStreet', method, frames);
 
-regular_training('shadow/backdoor');
-regular_training('shadow/bungalows');
-regular_training('shadow/busStation');
-regular_training('shadow/copyMachine');
-regular_training('shadow/cubicle');
-regular_training('shadow/peopleInShade');
+ms_regular_training('PTZ/continuousPan', method, frames);
+ms_regular_training('PTZ/intermittentPan', method, frames);
+ms_regular_training('PTZ/twoPositionPTZCam', method, frames);
+ms_regular_training('PTZ/zoomInZoomOut', method, frames);
 
-regular_training('thermal/corridor');
-regular_training('thermal/diningRoom');
-regular_training('thermal/lakeSide');
-regular_training('thermal/library');
-regular_training('thermal/park');
+ms_regular_training('shadow/backdoor', method, frames);
+ms_regular_training('shadow/bungalows', method, frames);
+ms_regular_training('shadow/busStation', method, frames);
+ms_regular_training('shadow/copyMachine', method, frames);
+ms_regular_training('shadow/cubicle', method, frames);
+ms_regular_training('shadow/peopleInShade', method, frames);
 
-regular_training('turbulence/turbulence0');
-regular_training('turbulence/turbulence1');
-regular_training('turbulence/turbulence2');
-regular_training('turbulence/turbulence3');
+ms_regular_training('thermal/corridor', method, frames);
+ms_regular_training('thermal/diningRoom', method, frames);
+ms_regular_training('thermal/lakeSide', method, frames);
+ms_regular_training('thermal/library', method, frames);
+ms_regular_training('thermal/park', method, frames);
+
+ms_regular_training('turbulence/turbulence0', method, frames);
+ms_regular_training('turbulence/turbulence1', method, frames);
+ms_regular_training('turbulence/turbulence2', method, frames);
+ms_regular_training('turbulence/turbulence3', method, frames);

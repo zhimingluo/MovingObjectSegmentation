@@ -1,10 +1,7 @@
-function training(video)
+function training(video, method, frames)
 
-method = 'manual';
-num_frames = 200;
 
-opts.dataDir = 'net/traffic_Simple' ;
-opts.expDir = ['net/' method '/' num2str(num_frames) '/' video];
+opts.expDir = ['net/' method '/' num2str(frames) '/' video];
 
 opts.train.batchSize = 5 ;
 opts.train.numEpochs = 20;
@@ -18,11 +15,8 @@ opts.train.expDir = opts.expDir;
 % --------------------------------------------------------------------
 imgDir = ['../' video '/input'];
 labelDir = ['../' video '/GT'];
-%grayDir = fullfile('/home/local/USHERBROOKE/luoz3301/Background/YT_SS', ...
-%    method, '/', num2str(num_frames), video);
-%grayDir = fullfile('/home/local/USHERBROOKE/luoz3301/Background/Fuse_SS', video);
 
-grayDir = fullfile('../Result/', method, '/', num2str(num_frames), video);
+grayDir = fullfile('../result/', method, '/', num2str(num_frames), video);
 
 imdb = getImdb_new(imgDir, labelDir, grayDir);
 

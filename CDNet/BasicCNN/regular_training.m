@@ -1,10 +1,5 @@
-function regular_training(video)
+function regular_training(video, method, frames)
 
-
-method = 'manual';
-frames = 200;
-
-opts.dataDir = 'net/traffic_Simple' ;
 opts.expDir = ['net/' method '/' num2str(frames) '/' video] ;
 
 opts.train.batchSize = 5 ;
@@ -15,21 +10,17 @@ opts.train.learningRate    = 1e-3;
 opts.train.expDir = opts.expDir ;
 
 
-%opts = vl_argparse(opts, varargin) ;
-
 % --------------------------------------------------------------------
 %                                                         Prepare data
 % --------------------------------------------------------------------
 
-%imgDir = ['./entireVideo/manual/100frames/' video '/input'];
-%labelDir = ['./entireVideo/manual/100frames/' video '/GT'];
 
-imgDir = ['../' video '/input'];
-labelDir = ['../' video '/GT'];
+imgDir = ['../CDNetDataset/' method '/' num2str(frames) 'frames/' video '/input'];
+labelDir = ['../CDNetDataset/' method '/' num2str(frames) 'frames/' video '/GT'];
 imdb = getImdb(imgDir,labelDir);
 
 
-mask = imread(['../' video '/ROI.bmp']);
+mask = imread(['../CDNetDataset/' method '/' num2str(frames) 'frames/' video '/ROI.bmp']);
 mask = mask(:,:,1);
 A = max(max(mask));
 mask(mask == A) = 1;
@@ -42,7 +33,6 @@ imdb.half_size = 15;
 
 %%%%%%Yi%%%%%% redefined the net
 load('net');
-%net.layers{end}.type = 'softmaxloss_mask';
 
 net.layers{end-1} = struct('type', 'conv', ...
     'filters', 0.1*randn(1,1,64,1, 'single'), ...
@@ -51,8 +41,6 @@ net.layers{end-1} = struct('type', 'conv', ...
     'pad', 0) ;
 net.layers{end} = struct('type', 'sigmoidcrossentropyloss');
 
-
-%load(['../meanPixel/', category, '_', video, '_meanPixel']);
 load('meanPixel.mat');
 imdb.meanPixel = meanPixel;
 
@@ -60,13 +48,9 @@ imdb.meanPixel = meanPixel;
     opts.train,'errorType','euclideanloss',...
     'conserveMemory', true);
 
-% [net,info] = cnn_train(net, imdb, @getBatch,...
-%     opts.train, 'errorType','whole_5', ...
-%     'val', find(imdb.images.set == 3), ...
-%     'conserveMemory', true) ;
 end
 
-function [im, labels, mask] = getBatch(imdb, batch)
+function [im, labels] = getBatch(imdb, batch)
 % --------------------------------------------------------------------
 
 half_size = imdb.half_size;
