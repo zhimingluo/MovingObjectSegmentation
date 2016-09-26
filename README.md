@@ -7,7 +7,6 @@ The git repository contains the code for the paper:
 To appear in Special Issue on Scene Background Modeling and Initialization of *Pattern Recognition Letters*.
 
 
-
 ### Citing
 
 If you use this code, please cite our paper.
@@ -29,6 +28,6 @@ The training data used in the paper can be download at:
 
 For the CDNet dataset, we upload the result to [CDNet](http://changedetection.net/) for evaluation.
 
-And the SBMI dataset, we compute the evalutaion metrics by using the code provide by [CDNet](http://changedetection.net/).
+And the SBMI dataset, the evalutaion metrics were computed by using the code provide by [CDNet](http://changedetection.net/).
 
 
